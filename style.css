@@ -1,0 +1,49 @@
+.header{
+    padding: 40px;
+    flex: 80px;
+    text-align: left;
+    background: blue;
+    color: wheat;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: yellow;
+    color: blue
+}
+
+.main{
+    display: flex;
+    text-align: left;
+    background: greenyellow;
+    color: white;
+}
+
+.onepage {
+    padding: 20px;
+    flex: 30px;
+    background: red;
+    color: blue;
+    text-align: left;
+}
+
+.secondpage{
+    padding: 20px;
+    flex: 70px;
+    background: orangered;
+    color: blue;
+    text-align: center
+}
+
+div {
+    display: block;
+}
+
+.time {
+    float: right;
+    flex: 20px;
+    height: 100%;
+    background: orange;
+    
+}
