@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+{% load static %}
+<!doctype html>
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style.css">    
+        <title>Gra Logistyczna | {% block title %}{% endblock %} </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../static/css/style.css"/>
     </head>
     <body>
-        <div class="header">
-            <div class="time">
-            </div>
-            <h1>GRA LOGISTYCZNA</h1>
-            <p>stworzona na podstawie gry piwnej</p>
-        </div>
-        <div class="main">
-            <div class="onepage">
-                <h1>Bieżący stan gry:</h1>
-                <p>Obecny stan zapasu:</p>
-                <p>Obecny stan zapasu: </p>
-                <p></p>
-            </div>
-            <div class="secondpage">
-                <label for="liczba">Wprowadź zamówienie: </label> 
-                <input type="number" id="liczba" name="liczba" 
-                       min="1" max="100" maxlenght="3"></h1>
-                <button>Wyślij</button>
-            </div>
-        </div>
-        <div class="footer">stopka gdzie będzie jakas informacje</div>
+    {% include "header.html" %}
+    {%  block header %}
+    {%  endblock %}
+    {%  block css %}
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css"/>
+    {%  endblock %}
+    {%  block content %}
+    {%  endblock %}
+    {% include "stopka_info.html" %}
+
+    {% include "footer.html" %}
     </body>
 </html>
+

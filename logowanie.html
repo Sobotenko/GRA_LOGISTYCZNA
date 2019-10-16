@@ -1,0 +1,23 @@
+{%  extends 'base.html' %}
+{%  block css %}{%  endblock %}
+
+{%  block title %} Logowanie {% endblock %}
+{% block content %}
+<body>
+<div class="center">
+    <div id="panel">
+        <form>
+            <label for="name">Użytkownik1111</label>
+                <input type="text" id="name" name="name"><span class="highlight"></span>
+            <label for="password">Hasło</label>
+                <input type="passwords" id="passwords" name="passwords"><span class="highlight"></span>
+            <div id="lower">
+                <input type="submit" value="Log in">
+            </div>
+            <a href="#">Create An Account </a>
+
+        </form>
+    </div>
+</div>
+</body>
+{% endblock %}

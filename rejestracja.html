@@ -1,0 +1,30 @@
+{%  extends 'base.html' %}
+{%  block css %}{%  endblock %}
+
+{% block title %} Rejestracja {% endblock %}
+
+{%  block content %}
+<body>
+<div class="center">
+    <div id="panel">
+        <h2>Zarejestruj się</h2>
+        <form>
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name">
+            <label for="lastName">Nazwisko:</label>
+            <input type="text" id="lastName" name="lastName">
+            <label for="password">Hasło:</label>
+            <input type="text" id="passwords" name="passwords">
+            <label for="addressmail">Adres mail:</label>
+            <input type="text" id="addressmail" name="addressmail">
+            <div id="lower">
+                <input type="submit" value="Zarejestruj się">
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+
+{% endblock %}
+

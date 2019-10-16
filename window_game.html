@@ -1,0 +1,89 @@
+{%  extends 'base.html' %}
+{%  block css %}{%  endblock %}
+
+{% block title %} dla każdej strony coś innego {% endblock %}
+{% block content %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css"/>
+  </head>
+  <body>
+  <div class="container">
+      <div class="tytul" style="text-align: left">
+      <h4>Użytkownik: dla każdego użytkownika ta sama strona z innymi parametrami {{ player }}</h4>
+      </div>
+      <div style="width: auto; border: 1px blue">
+          <div style="float: left; width: 30%;">
+            <label>Wiadomości</label>
+              <table class="table-dark" title="Wiadomosci">
+                  <tbody>
+                  <tr>
+                      <th style="float: left" scope="col">Runda:4 {{ items.round }}</th>
+                  </tr>
+                  <tr>
+                      <th style="float: left" scope="col">Popyt w tej rundzie:4 {{ items.demand }}</th>
+                  </tr>
+                  <tr>
+                      <th style="float: left" scope="col" >Palety dostarczone w tej rundzie: 4 {{ items.good }}</th>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div style="float: left; width: 30%;">
+            <label>Twoje zamówienie w tej rundzie</label>
+              <form>
+                  <label>W tej rundzie zamawiam następującą liczbę palet:</label>
+                  <input type="number" min="1" max="20"><span class="highlight"></span><input type="submit" value="Zamów">
+              </form>
+          </div>
+          <div style="float: left; width: 30%;">
+            <label>Ustawienia gry</label>
+              <table class="table-dark" title="Ustawienia gry">
+                  <tbody>
+                  <tr>
+                      <th style="float: left" scope="col">Koszt 1 palety: {{ items.cost }}</th>
+                  </tr>
+                  <tr>
+                      <th style="float: left" scope="col">Dochód z 1 palety: {{ items.dochod }}</th>
+                  </tr>
+                  <tr>
+                      <th style="float: left" scope="col">Koszt magazynowania: {{ items.costW }}</th>
+                  </tr>
+                  </tbody>
+              </table>
+        </div>
+            <br style="clear: left;" />
+    </div>
+        <div style="width: 100%">
+            <table class="table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">Runda {{ models.runda }}</th>
+                    <th scope="col">Magazyn przed {{ models.mag_przed }}</th>
+                    <th scope="col">Towar odebrany {{ models.tow_odb}}</th>
+                    <th scope="col">Koszt towaru {{ models.koszt_towa }}</th>
+                    <th scope="col">Towar wysłany {{ models.tow_wys }}</th>
+                    <th scope="col">Dochód {{ models.dochod }}</th>
+                    <th scope="col">Magazyn po {{ models.mag_po }}</th>
+                    <th scope="col">Koszty mag. {{ models.koszt_mag }}</th>
+                    <th scope="col">Otwarte zam. {{ models.otw_mag }}</th>
+                    <th scope="col">Przychodzące zam. {{  }}</th>
+                    <th scope="col">Zrealizowane zam.</th>
+                    <th scope="col">Otwarte zam. po</th>
+                    <th scope="col">Koszt otwartych zam.</th>
+                    <th scope="col">Budżet</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+  </div>
+  </body>
+</html>
+{% endblock %}
+
+
+
